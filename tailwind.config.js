@@ -5,7 +5,7 @@ module.exports = {
   ],
   theme: {
     screens: {
-      xs: '20rem',
+      xs: '21.875rem',
       sm: '40rem',
       md: '48rem',
       lg: '64rem',
@@ -23,6 +23,7 @@ module.exports = {
         'clr-person': 'hsl(246, 80%, 60%)',
         'clr-section': 'hsl(226, 43%, 10%)',
         'clr-card': 'hsl(235, 46%, 20%)',
+        'clr-card-hover': 'hsl(236, 41%, 34%)',
         'clr-accent': 'hsl(236, 100%, 87%)',
         'clr-inactive': 'hsl(235, 45%, 61%)',
       },

@@ -2,3 +2,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.clr-work {
+  background-color: hsl(15, 100%, 70%);
+}
+.clr-play {
+  background-color: hsl(195, 74%, 62%);
+}
+.clr-study {
+  background-color: hsl(348, 100%, 68%);
+}
+.clr-exercise {
+  background-color: hsl(145, 58%, 55%);
+}
+.clr-social {
+  background-color: hsl(264, 64%, 52%);
+}
+.clr-self-care {
+  background-color: hsl(43, 84%, 65%);
+}
