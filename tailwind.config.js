@@ -4,6 +4,14 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    screens: {
+      xs: '20rem',
+      sm: '40rem',
+      md: '48rem',
+      lg: '64rem',
+      xl: '80rem',
+      '2xl': '96rem',
+    },
     extend: {
       colors: {
         'clr-work': 'hsl(15, 100%, 70%)',
