@@ -38,16 +38,16 @@ export default function Home() {
             <p className="text-4xl text-center text-white">Loading...</p>
           )}
           {/* component */}
-          <div className="grid max-w-[69.375rem] w-full  font-rubik gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            <div className="sm:col-span-2 md:col-span-3 lg:col-span-1 lg:row-span-2">
-              {data.length > 0 && (
+          <div className="grid max-w-[69.375rem] w-full  font-rubik gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
+            {data.length > 0 && (
+              <div className="sm:col-span-2 md:col-span-3 lg:col-span-1 lg:row-span-2 md:animate-fadein">
                 <Person
                   currentCategory={currentCategory}
                   action={categoryButtonHandler}
                   categories={categories}
                 />
-              )}
-            </div>
+              </div>
+            )}
 
             {data.map((item, index) => {
               const { title, timeframes } = item
@@ -61,7 +61,7 @@ export default function Home() {
                 .replace(' ', '-')}.svg`)
 
               return (
-                <div key={index}>
+                <div className="md:animate-fadein" key={index}>
                   <Stat
                     title={title}
                     values={timeframes[currentCategory]}

@@ -30,6 +30,21 @@ module.exports = {
       fontFamily: {
         rubik: ['Rubik', 'sans-serif'],
       },
+      keyframes: {
+        fadein: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(2rem)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
+        },
+      },
+      animation: {
+        fadein: 'fadein 1s ease-in-out',
+      },
     },
   },
   plugins: [],

@@ -1,14 +1,14 @@
 import Image from 'next/image'
-import dots from '../../public/images/icon-ellipsis.svg'
 import Ellipsis from '../Ellipsis'
 
 const Stat = ({ title, icon, values, range }) => {
   const style = title.toLowerCase().replace(' ', '-')
   const { current, previous } = values
   return (
-    <div className="relative pt-[2.375rem] group ">
+    <div className="relative pt-[2.375rem] animated-card-hover">
+      {/* background */}
       <div
-        className={`absolute top-0 left-0 z-10 w-full overflow-hidden h-5/6 clr-${style} rounded-2xl group-hover:-top-4 transition-all`}
+        className={`absolute top-0 left-0 z-10 w-full overflow-hidden h-5/6 clr-${style} rounded-2xl  transition-all move-up`}
       >
         <div className="absolute -top-2 right-4">
           <Image
@@ -19,16 +19,16 @@ const Stat = ({ title, icon, values, range }) => {
           />
         </div>
       </div>
+      {/* background */}
+
+      {/* content */}
       <div className="relative z-20 px-6 transition-colors cursor-pointer bg-clr-card py-7 rounded-2xl hover:bg-clr-card-hover">
-        <div className="flex items-center justify-between">
+        <div className="flex justify-between">
           <h3 className="text-lg font-medium text-white" value={title}>
             {title}
           </h3>
 
-          {/* Required refactor */}
-          <div>
-            <Ellipsis />
-          </div>
+          <Ellipsis />
         </div>
 
         <div className="relative flex flex-col justify-between gap-2 mt-2 xs:items-center xs:flex-row md:flex-col md:items-start md:mt-6">
@@ -40,6 +40,7 @@ const Stat = ({ title, icon, values, range }) => {
           </p>
         </div>
       </div>
+      {/* content */}
     </div>
   )
 }

@@ -21,3 +21,7 @@
 .clr-self-care {
   background-color: hsl(43, 84%, 65%);
 }
+
+.animated-card-hover:hover > .move-up {
+  transform: translateY(-1rem);
+}
